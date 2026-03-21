@@ -22,26 +22,26 @@
   a { color: #fff; text-decoration: none; }
 
   .site {
-    max-width: 640px;
+    max-width: 680px;
     margin: 0 auto;
     padding: 0 28px 80px;
   }
 
-  /* ─── HEADER: name left, nav right ─── */
+  /* ─── HEADER ─── */
   header {
-    padding: 64px 0 0;
-    margin-bottom: 56px;
+    padding: 56px 0 0;
+    margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 32px;
   }
 
   .site-name a {
-    font-size: 28px;
+    font-size: 42px;
     font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
     transition: opacity 0.15s;
     display: block;
   }
@@ -50,14 +50,12 @@
 
   nav {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 5px;
-    padding-top: 4px;
+    gap: 24px;
+    padding-bottom: 4px;
   }
 
   nav a {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 400;
     color: rgba(255,255,255,0.45);
     transition: color 0.15s;
@@ -72,20 +70,12 @@
 
   @keyframes fin { from { opacity: 0; } to { opacity: 1; } }
 
-  /* ─── SECTION TITLE ─── */
-  .sec-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(255,255,255,0.5);
-    margin-bottom: 20px;
-  }
-
   /* ─── ABOUT ─── */
   .about-body {
     font-size: 15px;
     font-weight: 300;
     line-height: 1.85;
-    max-width: 540px;
+    max-width: 560px;
   }
 
   .about-body p + p { margin-top: 16px; }
@@ -132,10 +122,8 @@
     font-weight: 500;
   }
 
-  /* ─── NOTE LIST ─── */
+  /* ─── ARTICLE LIST ─── */
   .nlist { list-style: none; }
-
-  .nlist li + li { margin-top: 0; }
 
   .nlist a {
     display: block;
@@ -171,287 +159,12 @@
     padding: 24px 0;
   }
 
-  /* ─── ARTICLE VIEW ─── */
-  .av { display: none; }
-  .av.show { display: block; animation: fin 0.25s ease; }
-
-  .av-back {
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.45);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin-bottom: 32px;
-    transition: color 0.15s;
-  }
-
-  .av-back:hover { color: #fff; }
-
-  .av-h {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.35;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-  }
-
-  .av-meta {
-    font-size: 12px;
-    color: rgba(255,255,255,0.4);
-    margin-bottom: 36px;
-  }
-
-  .av-body {
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.9;
-    white-space: pre-wrap;
-    max-width: 560px;
-  }
-
-  .av-admin {
-    margin-top: 48px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    display: flex;
-    gap: 16px;
-  }
-
-  .av-admin button {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    background: none;
-    border: none;
-    color: rgba(255,255,255,0.45);
-    cursor: pointer;
-    padding: 0;
-    transition: color 0.15s;
-  }
-
-  .av-admin button:hover { color: #fff; }
-  .av-admin .del-link { color: rgba(255,150,150,0.7); }
-  .av-admin .del-link:hover { color: #ff9999; }
-
-  /* ─── FAVORITES ─── */
-  .fav-body {
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.85;
-    max-width: 540px;
-    color: rgba(255,255,255,0.8);
-  }
-
-  /* ─── ADMIN BAR ─── */
-  .admin-bar {
-    display: none;
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: rgba(0,0,0,0.88);
-    backdrop-filter: blur(16px);
-    padding: 14px 28px;
-    z-index: 90;
-  }
-
-  .admin-bar.on { display: block; }
-
-  .ab-inner {
-    max-width: 640px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .ab-label {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
-  }
-
-  .ab-btns { display: flex; gap: 8px; }
-
-  .ab-btn {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    padding: 6px 14px;
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.75);
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all 0.15s;
-  }
-
-  .ab-btn:hover {
-    background: rgba(255,255,255,0.07);
-    border-color: rgba(255,255,255,0.3);
-  }
-
-  /* ─── PASSWORD GATE ─── */
-  .pw-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    z-index: 300;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .pw-overlay.open { display: flex; }
-
-  .pw-box {
-    background: #111;
-    padding: 32px 28px;
-    border-radius: 4px;
-    width: 300px;
-    animation: fin 0.2s ease;
-  }
-
-  .pw-box h4 {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 18px;
-  }
-
-  .pw-box input {
-    width: 100%;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 10px 14px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.12);
-    color: #fff;
-    outline: none;
-    border-radius: 2px;
-    transition: border-color 0.15s;
-  }
-
-  .pw-box input:focus { border-color: rgba(255,255,255,0.35); }
-
-  .pw-err {
-    font-size: 12px;
-    color: #ff9999;
-    margin-top: 8px;
-    display: none;
-  }
-
-  .pw-foot {
-    display: flex;
-    justify-content: flex-end;
-    gap: 8px;
-    margin-top: 16px;
-  }
-
-  /* ─── MODAL ─── */
-  .overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-    backdrop-filter: blur(8px);
-    z-index: 200;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .overlay.open { display: flex; }
-
-  .modal {
-    background: #111;
-    color: #fff;
-    width: 92%;
-    max-width: 520px;
-    max-height: 85vh;
-    overflow-y: auto;
-    padding: 32px 28px;
-    border-radius: 4px;
-    animation: fin 0.2s ease;
-  }
-
-  .modal h3 {
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 24px;
-  }
-
-  .fg { margin-bottom: 16px; }
-
-  .fl {
-    display: block;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
-    margin-bottom: 6px;
-  }
-
-  .fi, .ft {
-    width: 100%;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 10px 14px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: #fff;
-    outline: none;
-    border-radius: 2px;
-    transition: border-color 0.15s;
-  }
-
-  .fi:focus, .ft:focus { border-color: rgba(255,255,255,0.3); }
-  .ft { min-height: 200px; resize: vertical; line-height: 1.7; }
-
-  .fi-hint {
-    font-size: 11px;
-    color: rgba(255,255,255,0.25);
-    margin-top: 4px;
-  }
-
-  .mfoot {
-    display: flex;
-    justify-content: flex-end;
-    gap: 8px;
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .mb {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    padding: 7px 16px;
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.75);
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all 0.15s;
-  }
-
-  .mb:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.3); }
-  .mb-save { border-color: rgba(138,188,255,0.45); color: #8abcff; }
-  .mb-del { border-color: rgba(255,100,100,0.25); color: #ff9999; }
-  .mb-del:hover { background: rgba(255,60,60,0.1); }
-
-  @media (max-width: 520px) {
-    header { padding-top: 44px; flex-direction: column; gap: 20px; }
-    nav { flex-direction: row; align-items: flex-start; gap: 16px; }
+  @media (max-width: 560px) {
+    header { padding-top: 40px; flex-direction: column; align-items: flex-start; gap: 16px; }
+    nav { gap: 18px; padding-bottom: 0; }
     .site { padding: 0 20px 60px; }
-    .site-name a { font-size: 24px; }
-    .av-h { font-size: 19px; }
+    .site-name a { font-size: 32px; }
+    nav a { font-size: 15px; }
   }
 </style>
 </head>
@@ -459,7 +172,7 @@
 
 <div class="site">
   <header>
-    <div class="site-name"><a href="#" onclick="goHome()">hari shankaran</a></div>
+    <div class="site-name"><a href="#" onclick="go('about')">hari shankaran</a></div>
     <nav>
       <a href="#" data-p="about" class="on" onclick="go('about')">about</a>
       <a href="#" data-p="notes" onclick="go('notes')">notes</a>
@@ -469,317 +182,126 @@
 
   <!-- about -->
   <div class="pg show" id="p-about">
-    <div class="sec-title">about</div>
-    <div class="about-body" id="aboutContent"></div>
+    <div class="about-body">
+      <p>welcome. more about me coming soon.</p>
+    </div>
   </div>
 
   <!-- notes -->
   <div class="pg" id="p-notes">
-    <div class="sec-title">notes</div>
     <div class="tags-row" id="tagsRow"></div>
-    <ul class="nlist" id="nlist"></ul>
-    <div class="empty-msg" id="emptyMsg" style="display:none;">nothing here yet.</div>
+    <ul class="nlist" id="notesList"></ul>
+    <div class="empty-msg" id="notesEmpty" style="display:none;">nothing here yet.</div>
   </div>
 
   <!-- favorites -->
   <div class="pg" id="p-favorites">
-    <div class="sec-title">favorites</div>
-    <div class="fav-body" id="favContent"></div>
-  </div>
-
-  <!-- article view -->
-  <div class="av" id="av">
-    <button class="av-back" onclick="closeAv()">← notes</button>
-    <div id="avInner"></div>
-  </div>
-</div>
-
-<!-- password gate -->
-<div class="pw-overlay" id="pwOverlay">
-  <div class="pw-box">
-    <h4>admin</h4>
-    <input type="password" id="pwInput" placeholder="password" autocomplete="off">
-    <div class="pw-err" id="pwErr">incorrect password.</div>
-    <div class="pw-foot">
-      <button class="mb" onclick="closePw()">cancel</button>
-      <button class="mb mb-save" onclick="checkPw()">enter</button>
-    </div>
-  </div>
-</div>
-
-<!-- admin bar -->
-<div class="admin-bar" id="adminBar">
-  <div class="ab-inner">
-    <span class="ab-label">admin</span>
-    <div class="ab-btns">
-      <button class="ab-btn" onclick="openNew()">new note</button>
-      <button class="ab-btn" onclick="openAboutEd()">edit about</button>
-      <button class="ab-btn" onclick="openFavEd()">edit favorites</button>
-    </div>
-  </div>
-</div>
-
-<!-- editor modal -->
-<div class="overlay" id="overlay">
-  <div class="modal">
-    <h3 id="mTitle">new note</h3>
-    <div id="fArticle">
-      <div class="fg">
-        <label class="fl">title</label>
-        <input class="fi" id="inTitle" autocomplete="off">
-      </div>
-      <div class="fg">
-        <label class="fl">tags</label>
-        <input class="fi" id="inTags" placeholder="restructuring, books, life" autocomplete="off">
-        <div class="fi-hint">comma-separated</div>
-      </div>
-      <div class="fg">
-        <label class="fl">content</label>
-        <textarea class="ft" id="inContent"></textarea>
-      </div>
-    </div>
-    <div id="fAbout" style="display:none;">
-      <div class="fg">
-        <label class="fl">about</label>
-        <textarea class="ft" id="inAbout"></textarea>
-      </div>
-    </div>
-    <div id="fFav" style="display:none;">
-      <div class="fg">
-        <label class="fl">favorites</label>
-        <textarea class="ft" id="inFav"></textarea>
-      </div>
-    </div>
-    <div class="mfoot">
-      <button class="mb" onclick="closeMod()">cancel</button>
-      <button class="mb mb-del" id="btnDel" style="display:none;" onclick="delNote()">delete</button>
-      <button class="mb mb-save" onclick="save()">save</button>
-    </div>
+    <ul class="nlist" id="favList"></ul>
+    <div class="empty-msg" id="favEmpty" style="display:none;">nothing here yet.</div>
   </div>
 </div>
 
 <script>
-  let notes = JSON.parse(localStorage.getItem('hs_notes') || '[]');
-  let aboutHTML = localStorage.getItem('hs_about') || '<p>welcome. more about me coming soon.</p>';
-  let favHTML = localStorage.getItem('hs_fav') || '<p>coming soon.</p>';
-  let activeTag = 'all';
-  let editId = null;
-  let fMode = 'article';
-  let isAdmin = false;
-  const PASS = 'ismehari';
+/*
+  HOW TO ADD ARTICLES
+  ===================
+  1. Create an HTML file in articles/notes/ or articles/favorites/
+     (copy TEMPLATE.html and replace the content)
+  2. Add an entry to NOTES or FAVORITES below
+  3. Commit both changes to your repo
+*/
 
-  function init() {
-    document.getElementById('aboutContent').innerHTML = aboutHTML;
-    document.getElementById('favContent').innerHTML = favHTML;
-    if (new URLSearchParams(window.location.search).has('edit')) showPw();
-    render();
-  }
+const NOTES = [
+  // {
+  //   title: "on choosing depth over breadth",
+  //   date: "2026-03-15",
+  //   tags: ["life", "decisions"],
+  //   url: "articles/notes/on-choosing-depth-over-breadth.html"
+  // },
+];
 
-  // password
-  function showPw() {
-    document.getElementById('pwOverlay').classList.add('open');
-    document.getElementById('pwErr').style.display = 'none';
-    document.getElementById('pwInput').value = '';
-    setTimeout(() => document.getElementById('pwInput').focus(), 100);
-  }
+const FAVORITES = [
+  // {
+  //   title: "margin of safety — seth klarman",
+  //   date: "2026-03-10",
+  //   tags: [],
+  //   url: "articles/favorites/margin-of-safety.html"
+  // },
+];
 
-  function checkPw() {
-    if (document.getElementById('pwInput').value === PASS) {
-      isAdmin = true;
-      document.getElementById('pwOverlay').classList.remove('open');
-      document.getElementById('adminBar').classList.add('on');
-    } else {
-      document.getElementById('pwErr').style.display = 'block';
-      document.getElementById('pwInput').value = '';
-      document.getElementById('pwInput').focus();
-    }
-  }
+let activeTag = 'all';
 
-  function closePw() {
-    document.getElementById('pwOverlay').classList.remove('open');
-    const url = new URL(window.location);
-    url.searchParams.delete('edit');
-    window.history.replaceState({}, '', url);
-  }
+function go(p) {
+  document.querySelectorAll('.pg').forEach(el => el.classList.remove('show'));
+  document.getElementById('p-' + p).classList.add('show');
+  document.querySelectorAll('nav a').forEach(a => a.classList.toggle('on', a.dataset.p === p));
+  return false;
+}
 
-  // nav
-  function go(p) {
-    document.getElementById('av').classList.remove('show');
-    document.querySelectorAll('.pg').forEach(el => el.classList.remove('show'));
-    document.getElementById('p-' + p).classList.add('show');
-    document.querySelectorAll('nav a').forEach(a => a.classList.toggle('on', a.dataset.p === p));
-    return false;
-  }
+function render() { renderNotes(); renderFav(); }
 
-  function goHome() { go('about'); return false; }
+function allTags() {
+  const s = new Set();
+  NOTES.forEach(n => (n.tags || []).forEach(t => s.add(t)));
+  return [...s].sort();
+}
 
-  // render
-  function render() { renderTags(); renderList(); }
-
-  function allTags() {
-    const s = new Set();
-    notes.forEach(n => (n.tags || []).forEach(t => s.add(t)));
-    return [...s].sort();
-  }
-
-  function renderTags() {
-    const tags = allTags();
-    const el = document.getElementById('tagsRow');
-    if (!tags.length) { el.innerHTML = ''; return; }
-    el.innerHTML =
+function renderNotes() {
+  const tags = allTags();
+  const tagEl = document.getElementById('tagsRow');
+  if (!tags.length) {
+    tagEl.innerHTML = '';
+  } else {
+    tagEl.innerHTML =
       `<button class="tag-btn ${activeTag === 'all' ? 'on' : ''}" onclick="setTag('all')">all</button>` +
       tags.map(t => `<button class="tag-btn ${activeTag === t ? 'on' : ''}" onclick="setTag('${esc(t)}')">${esc(t)}</button>`).join('');
   }
 
-  function renderList() {
-    const items = (activeTag === 'all' ? notes : notes.filter(n => (n.tags || []).includes(activeTag)))
-      .sort((a, b) => new Date(b.date) - new Date(a.date));
-    const ul = document.getElementById('nlist');
-    const em = document.getElementById('emptyMsg');
-    if (!items.length) { ul.innerHTML = ''; em.style.display = 'block'; return; }
-    em.style.display = 'none';
-    ul.innerHTML = items.map(n => {
-      const tagHtml = (n.tags || []).map(t => `<span class="n-meta-tag">${esc(t)}</span>`).join(', ');
-      return `<li><a href="#" onclick="openAv('${n.id}'); return false;">
-        <div class="n-title">${esc(n.title)}</div>
-        <div class="n-meta">${fmtDate(n.date)}${tagHtml ? ' · ' + tagHtml : ''}</div>
-      </a></li>`;
-    }).join('');
-  }
+  const items = (activeTag === 'all' ? NOTES : NOTES.filter(n => (n.tags || []).includes(activeTag)))
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  function setTag(t) { activeTag = t; render(); }
+  const ul = document.getElementById('notesList');
+  const em = document.getElementById('notesEmpty');
 
-  // article view
-  function openAv(id) {
-    const n = notes.find(x => x.id === id);
-    if (!n) return;
-    document.querySelectorAll('.pg').forEach(el => el.classList.remove('show'));
-    document.getElementById('av').classList.add('show');
+  if (!items.length) { ul.innerHTML = ''; em.style.display = 'block'; return; }
+  em.style.display = 'none';
+
+  ul.innerHTML = items.map(n => {
     const tagHtml = (n.tags || []).map(t => `<span class="n-meta-tag">${esc(t)}</span>`).join(', ');
-    let admin = '';
-    if (isAdmin) {
-      admin = `<div class="av-admin">
-        <button onclick="openEdit('${n.id}')">edit</button>
-        <button class="del-link" onclick="delDirect('${n.id}')">delete</button>
-      </div>`;
-    }
-    document.getElementById('avInner').innerHTML = `
-      <div class="av-h">${esc(n.title)}</div>
-      <div class="av-meta">${fmtDate(n.date)}${tagHtml ? ' · ' + tagHtml : ''}</div>
-      <div class="av-body">${esc(n.content)}</div>
-      ${admin}`;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+    return `<li><a href="${n.url}">
+      <div class="n-title">${esc(n.title)}</div>
+      <div class="n-meta">${fmtDate(n.date)}${tagHtml ? ' · ' + tagHtml : ''}</div>
+    </a></li>`;
+  }).join('');
+}
 
-  function closeAv() { document.getElementById('av').classList.remove('show'); go('notes'); }
+function renderFav() {
+  const items = FAVORITES.sort((a, b) => new Date(b.date) - new Date(a.date));
+  const ul = document.getElementById('favList');
+  const em = document.getElementById('favEmpty');
 
-  // admin
-  function openNew() {
-    editId = null; fMode = 'article';
-    document.getElementById('mTitle').textContent = 'new note';
-    document.getElementById('fArticle').style.display = 'block';
-    document.getElementById('fAbout').style.display = 'none';
-    document.getElementById('fFav').style.display = 'none';
-    document.getElementById('inTitle').value = '';
-    document.getElementById('inTags').value = '';
-    document.getElementById('inContent').value = '';
-    document.getElementById('btnDel').style.display = 'none';
-    document.getElementById('overlay').classList.add('open');
-  }
+  if (!items.length) { ul.innerHTML = ''; em.style.display = 'block'; return; }
+  em.style.display = 'none';
 
-  function openEdit(id) {
-    const n = notes.find(x => x.id === id);
-    if (!n) return;
-    editId = id; fMode = 'article';
-    document.getElementById('mTitle').textContent = 'edit note';
-    document.getElementById('fArticle').style.display = 'block';
-    document.getElementById('fAbout').style.display = 'none';
-    document.getElementById('fFav').style.display = 'none';
-    document.getElementById('inTitle').value = n.title;
-    document.getElementById('inTags').value = (n.tags || []).join(', ');
-    document.getElementById('inContent').value = n.content;
-    document.getElementById('btnDel').style.display = 'inline-block';
-    document.getElementById('overlay').classList.add('open');
-  }
+  ul.innerHTML = items.map(n => {
+    return `<li><a href="${n.url}">
+      <div class="n-title">${esc(n.title)}</div>
+      <div class="n-meta">${fmtDate(n.date)}</div>
+    </a></li>`;
+  }).join('');
+}
 
-  function openAboutEd() {
-    fMode = 'about';
-    document.getElementById('mTitle').textContent = 'edit about';
-    document.getElementById('fArticle').style.display = 'none';
-    document.getElementById('fAbout').style.display = 'block';
-    document.getElementById('fFav').style.display = 'none';
-    document.getElementById('inAbout').value = aboutHTML;
-    document.getElementById('btnDel').style.display = 'none';
-    document.getElementById('overlay').classList.add('open');
-  }
+function setTag(t) { activeTag = t; renderNotes(); }
 
-  function openFavEd() {
-    fMode = 'fav';
-    document.getElementById('mTitle').textContent = 'edit favorites';
-    document.getElementById('fArticle').style.display = 'none';
-    document.getElementById('fAbout').style.display = 'none';
-    document.getElementById('fFav').style.display = 'block';
-    document.getElementById('inFav').value = favHTML;
-    document.getElementById('btnDel').style.display = 'none';
-    document.getElementById('overlay').classList.add('open');
-  }
+function fmtDate(str) {
+  const d = new Date(str + 'T00:00:00');
+  const m = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+  return `${m[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+}
 
-  function save() {
-    if (fMode === 'about') {
-      aboutHTML = document.getElementById('inAbout').value;
-      localStorage.setItem('hs_about', aboutHTML);
-      document.getElementById('aboutContent').innerHTML = aboutHTML;
-      closeMod(); return;
-    }
-    if (fMode === 'fav') {
-      favHTML = document.getElementById('inFav').value;
-      localStorage.setItem('hs_fav', favHTML);
-      document.getElementById('favContent').innerHTML = favHTML;
-      closeMod(); return;
-    }
-    const title = document.getElementById('inTitle').value.trim();
-    const content = document.getElementById('inContent').value.trim();
-    if (!title || !content) return;
-    const tags = document.getElementById('inTags').value.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
-    if (editId) {
-      const n = notes.find(x => x.id === editId);
-      if (n) { n.title = title; n.content = content; n.tags = tags; }
-    } else {
-      notes.push({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 5), title, content, tags, date: new Date().toISOString() });
-    }
-    persist(); closeMod(); render();
-    if (editId) openAv(editId);
-  }
+function esc(s) { const e = document.createElement('span'); e.textContent = s; return e.innerHTML; }
 
-  function delNote() {
-    if (!editId || !confirm('delete this note?')) return;
-    notes = notes.filter(n => n.id !== editId);
-    persist(); closeMod(); render(); closeAv();
-  }
-
-  function delDirect(id) {
-    if (!confirm('delete this note?')) return;
-    notes = notes.filter(n => n.id !== id);
-    persist(); render(); closeAv();
-  }
-
-  function closeMod() { document.getElementById('overlay').classList.remove('open'); }
-  function persist() { localStorage.setItem('hs_notes', JSON.stringify(notes)); }
-
-  function fmtDate(iso) {
-    const d = new Date(iso);
-    const m = ['january','february','march','april','may','june','july','august','september','october','november','december'];
-    return `${m[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
-  }
-
-  function esc(s) { const e = document.createElement('span'); e.textContent = s; return e.innerHTML; }
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { closeMod(); closePw(); }
-    if (e.key === 'Enter' && document.getElementById('pwOverlay').classList.contains('open')) checkPw();
-  });
-
-  init();
+render();
 </script>
 
 </body>
