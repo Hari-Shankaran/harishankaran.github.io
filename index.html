@@ -22,52 +22,51 @@
   a { color: #fff; text-decoration: none; }
 
   .site {
-    max-width: 680px;
+    max-width: 780px;
     margin: 0 auto;
-    padding: 0 28px 80px;
+    padding: 0 32px 80px;
   }
 
-  /* ─── HEADER ─── */
+  /* ─── HEADER: name left, nav right, same line ─── */
   header {
-    padding: 56px 0 0;
-    margin-bottom: 60px;
+    padding: 52px 0 52px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 32px;
   }
 
   .site-name a {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 600;
     letter-spacing: -0.03em;
     line-height: 1.1;
     transition: opacity 0.15s;
-    display: block;
   }
 
   .site-name a:hover { opacity: 0.7; }
 
   nav {
     display: flex;
-    gap: 24px;
-    padding-bottom: 4px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    padding-top: 2px;
   }
 
   nav a {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 400;
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.4);
     transition: color 0.15s;
   }
 
-  nav a:hover { color: rgba(255,255,255,0.8); }
+  nav a:hover { color: rgba(255,255,255,0.75); }
   nav a.on { color: #fff; }
 
   /* ─── PAGES ─── */
   .pg { display: none; }
   .pg.show { display: block; animation: fin 0.25s ease; }
-
   @keyframes fin { from { opacity: 0; } to { opacity: 1; } }
 
   /* ─── ABOUT ─── */
@@ -75,7 +74,7 @@
     font-size: 15px;
     font-weight: 300;
     line-height: 1.85;
-    max-width: 560px;
+    max-width: 540px;
   }
 
   .about-body p + p { margin-top: 16px; }
@@ -159,12 +158,13 @@
     padding: 24px 0;
   }
 
-  @media (max-width: 560px) {
-    header { padding-top: 40px; flex-direction: column; align-items: flex-start; gap: 16px; }
-    nav { gap: 18px; padding-bottom: 0; }
+  /* ─── MOBILE ─── */
+  @media (max-width: 600px) {
     .site { padding: 0 20px 60px; }
-    .site-name a { font-size: 32px; }
-    nav a { font-size: 15px; }
+    header { padding: 40px 0 36px; flex-direction: column; gap: 16px; }
+    .site-name a { font-size: 28px; }
+    nav { flex-direction: row; align-items: flex-start; gap: 18px; }
+    nav a { font-size: 16px; }
   }
 </style>
 </head>
